@@ -1,14 +1,16 @@
-import React, {useRef} from 'react'
+import React, {useRef, useContext} from 'react'
 import { Card, Form, Button } from 'react-bootstrap'
+import ThemeContext from '../contexts/ThemeContext'
 
 export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
+    const {theme} = useContext(ThemeContext)
   return (
     <div>
         <Card>
-            <Card.Body>
+            <Card.Body id={theme}>
                 <h2 className="text-center mb-4">Sign Up</h2>
                 <Form>
                     <Form.Group id="email">
