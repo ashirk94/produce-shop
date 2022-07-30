@@ -5,7 +5,7 @@ import Switch from 'react-switch'
 import { AuthProvider } from '../contexts/AuthContext'
 
 function App() {
-	const [theme, setTheme] = useState('dark')
+	const [theme, setTheme] = useState('light')
 
 	const toggleTheme = () => {
 		setTheme((cur) => (cur === 'light' ? 'dark' : 'light'))

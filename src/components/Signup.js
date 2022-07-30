@@ -8,7 +8,7 @@ export default function Signup() {
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
     const {theme} = useContext(ThemeContext)
-    const {signup} = useAuth()
+    const {currentUser, signup} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
 
@@ -35,6 +35,7 @@ export default function Signup() {
         <Card>
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Sign Up</h2>
+                {currentUser && currentUser.email}
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id="email">
