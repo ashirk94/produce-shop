@@ -2,6 +2,7 @@ import React, {useRef, useContext, useState} from 'react'
 import { Card, Form, Button, Alert } from 'react-bootstrap'
 import ThemeContext from '../contexts/ThemeContext'
 import { useAuth } from '../contexts/AuthContext'
+import { Link } from 'react-router-dom'
 
 export default function Signup() {
     const emailRef = useRef()
@@ -55,7 +56,7 @@ export default function Signup() {
             </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">
-            Already have an account? Log In
+            Already have an account? <Link to='/login'>Log In</Link>
         </div>
     </div>
   )

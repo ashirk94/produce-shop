@@ -13,15 +13,15 @@ export default function Layout({ children }) {
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			<div className='page' id={theme}>
-				<Switch
+				<Container>	
+                <Switch
 					className='toggler'
 					onColor='#000000'
 					checked={theme === 'dark' ? true : false}
 					onChange={toggleTheme}
-				/>
-				<Container>
-					{children}
+				/>		
 					<div className='d-flex align-items-center justify-content-center container'>
+                    {children}
 					</div>
 				</Container>
 			</div>
