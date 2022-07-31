@@ -1,28 +1,23 @@
 import Layout from './Layout'
-import ThemeContext from '../contexts/ThemeContext'
-import React, { useState } from 'react'
-import Switch from 'react-switch'
+
+import React from 'react'
+
 import { AuthProvider } from '../contexts/AuthContext'
+import { Routes, Route } from 'react-router-dom'
+import Dashboard from './Dashboard'
+import Login from './Login'
+import Signup from './Signup'
 
 function App() {
-	const [theme, setTheme] = useState('light')
-
-	const toggleTheme = () => {
-		setTheme((cur) => (cur === 'light' ? 'dark' : 'light'))
-	}
-
 	return (
 		<AuthProvider>
-			<ThemeContext.Provider value={{ theme, toggleTheme }}>
-				<Layout>
-					<Switch
-						className='toggler'
-						onColor='#000000'
-						checked={theme === 'dark' ? true : false}
-						onChange={toggleTheme}
-					/>
-				</Layout>
-			</ThemeContext.Provider>
+			<Layout>
+				<Routes>
+					<Route exact path='/' element={<Dashboard />} />
+					<Route path='/signup' element={<Signup />} />
+					<Route path='/login' element={<Login />} />
+				</Routes>
+			</Layout>
 		</AuthProvider>
 	)
 }

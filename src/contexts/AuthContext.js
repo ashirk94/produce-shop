@@ -12,8 +12,8 @@ export function useAuth() {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in 
-          const user = userCredential.user;
-          console.log(user, 'user created successfully')
+          //const user = userCredential.user;
+          console.log('User created successfully')
         })
         .catch((error) => {
           const errorCode = error.code;
