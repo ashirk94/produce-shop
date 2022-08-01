@@ -1,16 +1,23 @@
-import React, {useRef, useContext, useState} from 'react'
+import React, {useRef, useContext, useState, useEffect} from 'react'
 import { Card, Form, Button, Alert } from 'react-bootstrap'
 import ThemeContext from '../contexts/ThemeContext'
 import { useAuth } from '../contexts/AuthContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const {theme} = useContext(ThemeContext)
-    const {currentUser, signup} = useAuth()
+    const {currentUser, login} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(currentUser) {
+            navigate('/')
+        }
+    }, [currentUser, navigate])
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -18,9 +25,10 @@ export default function Login() {
         try {
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await login(emailRef.current.value, passwordRef.current.value)
+            navigate('/')
         } catch {
-            setError('Failed to create an account')
+            setError('Failed to sign in')
         }
         setLoading(false)
 
@@ -31,7 +39,7 @@ export default function Login() {
         <Card>
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Log In</h2>
-                {currentUser && currentUser.email}
+                {/* {currentUser && 'Current User: ' + currentUser.email} */}
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id="email">
