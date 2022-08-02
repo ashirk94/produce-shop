@@ -1,17 +1,24 @@
-import React, {useRef, useContext, useState} from 'react'
+import React, {useRef, useContext, useState, useEffect} from 'react'
 import { Card, Form, Button, Alert } from 'react-bootstrap'
 import ThemeContext from '../contexts/ThemeContext'
 import { useAuth } from '../contexts/AuthContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
     const {theme} = useContext(ThemeContext)
-    const {signup} = useAuth()
+    const {currentUser, signup} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(currentUser) {
+            navigate('/')
+        }
+    }, [currentUser, navigate])
 
     async function handleSubmit(e) {
         e.preventDefault()
