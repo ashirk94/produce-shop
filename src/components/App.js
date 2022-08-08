@@ -9,6 +9,8 @@ import Login from './Login'
 import Signup from './Signup'
 import PrivateRoute from './PrivateRoute'
 import ForgotPassword from './ForgotPassword'
+import UpdateProfile from './UpdateProfile'
+import Home from './Home'
 
 function App() {
 	return (
@@ -16,11 +18,13 @@ function App() {
 			<Layout>
 				<Routes>
 					<Route element={<PrivateRoute />}>
-						<Route path='/' element={<Dashboard />} />
+						<Route path='/' element={<Home />} />
 					</Route>
 					<Route path='/signup' element={<Signup />} />
 					<Route path='/login' element={<Login />} />
                     <Route path='/forgot-password' element={<ForgotPassword />} />
+                    <Route path='/update-profile' element={<UpdateProfile />} />
+                    <Route path='/dashboard' element={<Dashboard />} />
 				</Routes>
 			</Layout>
 		</AuthProvider>
