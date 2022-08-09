@@ -41,6 +41,7 @@
     height: 100vh;
     flex-wrap: wrap;
     overflow-y: hidden;
+    max-width: 95% !important;
 }
 
 .toggler {

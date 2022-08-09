@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import ThemeContext from '../contexts/ThemeContext'
 import Switch from 'react-switch'
+import Navbar from './Navbar'
 
 export default function Layout({ children }) {
 	const [theme, setTheme] = useState('light')
@@ -13,7 +14,9 @@ export default function Layout({ children }) {
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			<div className='page' id={theme}>
+
 				<Container>	
+                <Navbar />
                 <Switch
 					className='toggler'
 					onColor='#000000'

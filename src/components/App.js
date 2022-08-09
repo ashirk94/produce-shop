@@ -4,13 +4,15 @@ import React from 'react'
 
 import { AuthProvider } from '../contexts/AuthContext'
 import { Routes, Route } from 'react-router-dom'
-import Dashboard from './Dashboard'
-import Login from './Login'
-import Signup from './Signup'
-import PrivateRoute from './PrivateRoute'
-import ForgotPassword from './ForgotPassword'
-import UpdateProfile from './UpdateProfile'
+import Dashboard from './account/Dashboard'
+import Login from './account/Login'
+import Signup from './account/Signup'
+import PrivateRoute from './account/PrivateRoute'
+import ForgotPassword from './account/ForgotPassword'
+import UpdateProfile from './account/UpdateProfile'
 import Home from './Home'
+import Store from './Store'
+import About from './About'
 
 function App() {
 	return (
@@ -19,12 +21,14 @@ function App() {
 				<Routes>
 					<Route element={<PrivateRoute />}>
 						<Route path='/' element={<Home />} />
+                        <Route path='/store' element={<Store />} />
 					</Route>
 					<Route path='/signup' element={<Signup />} />
 					<Route path='/login' element={<Login />} />
                     <Route path='/forgot-password' element={<ForgotPassword />} />
                     <Route path='/update-profile' element={<UpdateProfile />} />
                     <Route path='/dashboard' element={<Dashboard />} />
+                    <Route path='/about' element={<About />} />
 				</Routes>
 			</Layout>
 		</AuthProvider>

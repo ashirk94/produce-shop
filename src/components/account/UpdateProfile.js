@@ -1,7 +1,7 @@
 import React, {useRef, useContext, useState } from 'react'
 import { Card, Form, Button, Alert } from 'react-bootstrap'
-import ThemeContext from '../contexts/ThemeContext'
-import { useAuth } from '../contexts/AuthContext'
+import ThemeContext from '../../contexts/ThemeContext'
+import { useAuth } from '../../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function UpdateProfile() {

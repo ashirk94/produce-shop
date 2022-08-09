@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { Card, Button, Alert } from 'react-bootstrap'
-import { useAuth } from '../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
-import ThemeContext from '../contexts/ThemeContext'
+import ThemeContext from '../../contexts/ThemeContext'
 
 export default function Dashboard() {
     const [error, setError] = useState('')
