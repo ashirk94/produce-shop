@@ -20,15 +20,22 @@ function App() {
 			<Layout>
 				<Routes>
 					<Route element={<PrivateRoute />}>
-						<Route path='/' element={<Home />} />
-                        <Route path='/store' element={<Store />} />
+						<Route
+							path='/update-profile'
+							element={<UpdateProfile />}
+						/>
+						<Route path='/dashboard' element={<Dashboard />} />
 					</Route>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/store' element={<Store />} />
+
 					<Route path='/signup' element={<Signup />} />
 					<Route path='/login' element={<Login />} />
-                    <Route path='/forgot-password' element={<ForgotPassword />} />
-                    <Route path='/update-profile' element={<UpdateProfile />} />
-                    <Route path='/dashboard' element={<Dashboard />} />
-                    <Route path='/about' element={<About />} />
+					<Route
+						path='/forgot-password'
+						element={<ForgotPassword />}
+					/>
 				</Routes>
 			</Layout>
 		</AuthProvider>
