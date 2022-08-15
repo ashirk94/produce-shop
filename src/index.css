@@ -8,6 +8,19 @@
     color: hsl(0,0%,95%);
     border-color: hsl(0,0%,90%);
 }
+#light .navbar{
+    background: white;
+    color: black;
+    border-color: hsl(0,0%,5%);
+}
+#dark .navbar{
+    background: black;
+    color: white;
+    border-color: hsl(0,0%,90%);
+}
+#dark .navbar a{
+    color: white;
+}
 #light .page {
     width: 100%;
     height: 100vh;
@@ -47,4 +60,8 @@
 .toggler {
     position: absolute;
     max-height: 5px;
+}
+
+.card-img-top {
+    object-fit: cover;
 }

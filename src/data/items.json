@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Apple",
+        "price": 2.00,
+        "imgUrl": "/images/apple.png"
+    },
+    {
+        "id": 2,
+        "name": "Broccoli",
+        "price": 3.00,
+        "imgUrl": "/images/broccoli.png"
+    }
+]
