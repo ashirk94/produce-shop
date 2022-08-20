@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import ThemeContext from '../contexts/ThemeContext'
 import Switch from 'react-switch'
 import Navbar from './Navbar'
+import { ShoppingCartProvider } from '../contexts/ShoppingCartContext'
 
 export default function Layout({ children }) {
 	const [theme, setTheme] = useState('light')
@@ -13,6 +14,7 @@ export default function Layout({ children }) {
 
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <ShoppingCartProvider>
 			<div className='page' id={theme}>
 
 				<Container>	
@@ -31,6 +33,7 @@ export default function Layout({ children }) {
 					</div>
 				</Container>
 			</div>
+            </ShoppingCartProvider>
 		</ThemeContext.Provider>
 	)
 }
