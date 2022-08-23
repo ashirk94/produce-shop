@@ -16,12 +16,13 @@ export default function Navbar() {
                 <Nav.Link to={'/store'} as={NavLink}>Store</Nav.Link>
                 <Nav.Link to={'/about'} as={NavLink}>About</Nav.Link>
             </Nav>
+            {cartQuantity > 0 && (
             <Button onClick={openCart}>
             <FontAwesomeIcon icon={faCartShopping} />
             <div className='rounded-circle bg-danger d-flex justify-content-center alight-items-center cart-quantity'>
                 {cartQuantity}
             </div>
-            </Button>
+            </Button>)}
     </BootNav>
   )
 }

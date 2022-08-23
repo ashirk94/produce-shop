@@ -84,3 +84,8 @@
     right: 0;
     transform: translate(25%, 25%);
 }
+.cart-img {
+    width: 125px;
+    height: 75px;
+    object-fit: cover;
+}
