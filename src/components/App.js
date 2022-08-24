@@ -1,9 +1,7 @@
-import Layout from './Layout'
-
 import React from 'react'
-
 import { AuthProvider } from '../contexts/AuthContext'
 import { Routes, Route } from 'react-router-dom'
+import Layout from './Layout'
 import Dashboard from './account/Dashboard'
 import Login from './account/Login'
 import Signup from './account/Signup'
