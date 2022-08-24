@@ -59,9 +59,33 @@
 
 .toggler {
     position: absolute;
-    max-height: 5px;
 }
-
 .card-img-top {
+    object-fit: cover;
+}
+.btn-gap {
+    gap: 0.5rem;
+}
+.day {
+    width: 20px;
+    height: 20px;
+}
+.night {
+    padding-left: 5px;
+    width: 30px;
+    height: 20px;
+}
+.cart-quantity {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%);
+}
+.cart-img {
+    width: 125px;
+    height: 75px;
     object-fit: cover;
 }
