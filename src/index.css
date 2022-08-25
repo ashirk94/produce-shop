@@ -8,15 +8,33 @@
     color: hsl(0,0%,95%);
     border-color: hsl(0,0%,90%);
 }
+#light .homepage{
+    background-image: url('/images/produce1.png');
+    color: hsl(0,0%,5%);
+    border-color: hsl(0,0%,5%);
+}
+#dark .homepage{
+    background-image: url('/images/produce1.png');
+    color: hsl(0,0%,95%);
+    border-color: hsl(0,0%,90%);
+}
 #light .navbar{
     background: white;
     color: black;
     border-color: hsl(0,0%,5%);
+    margin-bottom: 5px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
 }
 #dark .navbar{
     background: black;
     color: white;
     border-color: hsl(0,0%,90%);
+    margin-bottom: 5px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
 }
 #dark .navbar a{
     color: white;
@@ -35,6 +53,18 @@
     color: hsl(0,0%,95%);
     border-color: hsl(0,0%,90%);
 }
+#light .main {
+    background: hsl(0,0%,90%);
+    color: hsl(0,0%,5%);
+    border-color: hsl(0,0%,5%);
+    border-radius: 20px;
+}
+#dark .main {
+    background: hsl(0,0%,20%);
+    color: hsl(0,0%,95%);
+    border-color: hsl(0,0%,90%);
+    border-radius: 20px;
+}
 .signup {
     display: flex;
     max-width: '400px';
@@ -49,17 +79,37 @@
     color: hsl(0,0%,95%);
     border-color: hsl(0,0%,90%);
 }
-
+.homepage {
+    min-height: 80vh;
+    height: 100%;
+    width: 100%;
+    margin: 15px auto;
+}
+.about {
+    width: 80%;
+}
+h1 {
+    text-align: center;
+    font-size: 90px !important;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px !important;
+    }
+}
 .container {
-    height: 85%;
+    height: 100%;
     flex-wrap: wrap;
     max-width: 95% !important;
+    min-height: 85vh;
 }
 .layout {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 .toggler {
     position: absolute;
+    margin-bottom: 15px;
 }
 .card-img-top {
     object-fit: cover;
@@ -84,6 +134,7 @@
     bottom: 0;
     right: 0;
     transform: translate(25%, 25%);
+    margin-right: 6px;
 }
 .cart-img {
     width: 125px;

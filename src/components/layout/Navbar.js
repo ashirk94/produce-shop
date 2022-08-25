@@ -3,9 +3,9 @@ import { Nav, Button, Navbar as BootNav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import ThemeContext from '../contexts/ThemeContext'
-import { useShoppingCart } from '../contexts/ShoppingCartContext'
-import { useAuth } from '../contexts/AuthContext'
+import ThemeContext from '../../contexts/ThemeContext'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
+import { useAuth } from '../../contexts/AuthContext'
 
 export default function Navbar() {
 	const { theme } = useContext(ThemeContext)
@@ -25,6 +25,8 @@ export default function Navbar() {
 				</Nav.Link>
                 {currentUser && <Nav.Link to={'/dashboard'} as={NavLink}>
 					{currentUser.email}
+				</Nav.Link>}
+                {!currentUser && <Nav.Link to={'/login'} as={NavLink}>Login
 				</Nav.Link>}
 			</Nav>
 			{cartQuantity > 0 && (

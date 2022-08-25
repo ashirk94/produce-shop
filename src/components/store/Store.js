@@ -5,7 +5,8 @@ import StoreItem from './StoreItem'
 
 export default function Store() {
   return (
-    <div>
+    <>
+        <div>
         <h1>Store</h1>
         <Row>
             {storeItems.map(item => (
@@ -14,6 +15,7 @@ export default function Store() {
                     </Col>
             ))}        
         </Row>
-    </div>
+        </div>
+    </>
   )
 }

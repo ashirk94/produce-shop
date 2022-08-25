@@ -1,8 +1,0 @@
-When deploying with amplify change build path to /build
-
-Also add this redirect:
-
-Original Address:
-</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|json|webp)$)([^.]+$)/>
-Destination Address: /index.html
-Redirect Type: 200
