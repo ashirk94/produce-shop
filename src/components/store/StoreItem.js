@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Card, Button } from 'react-bootstrap'
-import ThemeContext from '../contexts/ThemeContext'
-import { formatCurrency } from '../utilities/formatCurrency'
-import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import ThemeContext from '../../contexts/ThemeContext'
+import { formatCurrency } from '../../utilities/formatCurrency'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 
 export default function StoreItem(props) {
 	const { theme } = useContext(ThemeContext)

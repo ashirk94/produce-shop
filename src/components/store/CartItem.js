@@ -1,8 +1,8 @@
 import React from 'react'
-import { useShoppingCart } from '../contexts/ShoppingCartContext'
-import storeItems from '../data/items.json'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
+import storeItems from '../../data/items.json'
 import { Stack, Button } from 'react-bootstrap'
-import { formatCurrency } from '../utilities/formatCurrency'
+import { formatCurrency } from '../../utilities/formatCurrency'
 
 export default function CartItem(props) {
 	const { removeFromCart } = useShoppingCart()

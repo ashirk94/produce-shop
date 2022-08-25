@@ -53,7 +53,7 @@
 .container {
     height: 100vh;
     flex-wrap: wrap;
-    overflow-y: hidden;
+    overflow-y: auto;
     max-width: 95% !important;
 }
 

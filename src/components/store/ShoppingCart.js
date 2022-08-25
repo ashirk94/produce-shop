@@ -1,10 +1,10 @@
 import { Offcanvas, Stack } from 'react-bootstrap'
 import React, { useContext } from 'react'
-import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import CartItem from './CartItem'
-import { formatCurrency } from '../utilities/formatCurrency'
-import storeItems from '../data/items.json'
-import ThemeContext from '../contexts/ThemeContext'
+import { formatCurrency } from '../../utilities/formatCurrency'
+import storeItems from '../../data/items.json'
+import ThemeContext from '../../contexts/ThemeContext'
 
 export default function ShoppingCart({ isOpen }) {
 	const { closeCart, cartItems } = useShoppingCart()
