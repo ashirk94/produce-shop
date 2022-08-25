@@ -11,7 +11,7 @@ import Home from './Home'
 import Store from './store/Store'
 import About from './About'
 import LayoutWrapper from './LayoutWrapper'
-import LayoutWrapperHome from './LayoutWrapperHome'
+//import LayoutWrapperHome from './LayoutWrapperHome'
 
 function App() {
 	return (
@@ -34,7 +34,7 @@ function App() {
 						element={<ForgotPassword />}
 					/>
 				</Route>
-				<Route element={<LayoutWrapperHome />}>
+				<Route element={<LayoutWrapper />}>
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 				</Route>

@@ -51,12 +51,13 @@
 }
 
 .container {
-    height: 100vh;
+    height: 85%;
     flex-wrap: wrap;
-    overflow-y: auto;
     max-width: 95% !important;
 }
-
+.layout {
+    height: 100vh;
+}
 .toggler {
     position: absolute;
 }

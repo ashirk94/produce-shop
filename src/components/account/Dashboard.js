@@ -26,10 +26,10 @@ export default function Dashboard() {
     <div>
         <Card>
             <Card.Body id={theme} className="signup-card">
-            <h2 className="text-center mb-4">Profile</h2>
+            <h2 className="text-center mb-4">Account Info</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <strong>Email: </strong> {currentUser && currentUser.email}
-            <Link to='/update-profile' className='btn btn-primary w-100 mt-3'>Update Profile</Link>
+            <Link to='/update-profile' className='btn btn-primary w-100 mt-3'>Update Email/Password</Link>
             </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">
