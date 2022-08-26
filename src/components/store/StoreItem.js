@@ -25,7 +25,7 @@ export default function StoreItem(props) {
 						{formatCurrency(props.price)}
 					</span>
 				</Card.Title>
-				<div className='mt-auto'>
+				<div>
 					{quantity === 0 ? (
 						<Button className='w-100' onClick={() => increaseCartQuantity(props.id)}>+ Add To Cart</Button>
 					) : (
