@@ -27,7 +27,7 @@ export default function NavbarStore() {
 					About
 				</Nav.Link>
                 {currentUser && <Nav.Link to={'/dashboard'} as={NavLink}>
-					{currentUser.email}
+					MyAccount
 				</Nav.Link>}
                 {!currentUser && <Nav.Link to={'/login'} as={NavLink}>Login
 				</Nav.Link>}
@@ -37,7 +37,7 @@ export default function NavbarStore() {
 			{cart && (
 				<Button onClick={openCart}>
 					<FontAwesomeIcon icon={faCartShopping} />
-					<div className='rounded-circle bg-danger d-flex justify-content-center alight-items-center cart-quantity'>
+					<div className='rounded-circle bg-danger d-flex justify-content-center align-items-center cart-quantity'>
 						{cartQuantity}
 					</div>
 				</Button>

@@ -25,9 +25,8 @@ export default function StoreItem(props) {
 						{formatCurrency(props.price)}
 					</span>
 				</Card.Title>
-			</Card.Body>
-            <Card.Footer>
-					{quantity === 0 ? (
+                <div className='card-buttons'>
+                {quantity === 0 ? (
 						<Button variant='primary' onClick={() => increaseCartQuantity(props.id)}>+ Add To Cart</Button>
 					) : (
 						<div className='d-flex align-items-center flex-column btn-gap'>
@@ -40,7 +39,8 @@ export default function StoreItem(props) {
                             <Button variant='danger' size='sm' onClick={() => removeFromCart(props.id)}>Remove</Button>
 						</div>                      
 					)}
-            </Card.Footer>
+                    </div>
+			</Card.Body>
 		</Card>
 	)
 }

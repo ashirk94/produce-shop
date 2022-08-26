@@ -175,7 +175,7 @@ h1 {
 }
 .food-item {
     min-width: 200px;
-    height: 300px;
+    min-height: 380px;
 }
 .card, .card-body, .card-img-top {
     border-radius: 20px !important;
@@ -206,14 +206,7 @@ h1 {
 .btn-primary {
     background-color: hsl(225, 100%, 35%) !important;
 }
-.card {
-    min-height: 400px;
-}
-.card-footer {
-    background: none !important;
-    border: none !important;    
-    padding: 0 !important;
-    height: 100%;
+.card-buttons {
     align-items: center;
     display: flex;
     justify-content: center;
