@@ -5,6 +5,7 @@ import CartItem from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
 import storeItems from '../../data/items.json'
 import ThemeContext from '../../contexts/ThemeContext'
+import { Link } from 'react-router-dom'
 
 export default function ShoppingCart({ isOpen }) {
 	const { closeCart, cartItems } = useShoppingCart()
@@ -31,13 +32,13 @@ export default function ShoppingCart({ isOpen }) {
 										(i) => i.id === cartItem.id
 									)
 									return (
-										total + item.price ||
-										0 * cartItem.quantity
+										total + item.price * cartItem.quantity || 0
 									)
 								}, 0)
 							)}
 					</div>
 				</Stack>
+                <Link className='btn btn-primary' to='/checkout'>Checkout</Link>
 			</Offcanvas.Body>
 		</Offcanvas>
 	)

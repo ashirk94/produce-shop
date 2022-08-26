@@ -10,21 +10,24 @@ import UpdateProfile from './account/UpdateProfile'
 import Home from './pages/Home'
 import Store from './store/Store'
 import About from './pages/About'
-import Layout from './layout/Layout'
+import LayoutWrapper from './layout/LayoutWrapper'
+import LayoutStoreWrapper from './layout/LayoutStoreWrapper'
+import Checkout from './store/Checkout'
+import PaymentSuccess from './store/PaymentSuccess'
 
 function App() {
 	return (
 		<AuthProvider>
-			<Layout>
-				<Routes>
+			<Routes>
+				<Route element={<LayoutWrapper />}>
 					<Route element={<PrivateRoute />}>
 						<Route
 							path='/update-profile'
 							element={<UpdateProfile />}
 						/>
 						<Route path='/dashboard' element={<Dashboard />} />
+						<Route path='/checkout' element={<Checkout />} />
 					</Route>
-					<Route path='/store' element={<Store />} />
 
 					<Route path='/signup' element={<Signup />} />
 					<Route path='/login' element={<Login />} />
@@ -34,8 +37,13 @@ function App() {
 					/>
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
-				</Routes>
-			</Layout>
+					<Route path='/success' element={<PaymentSuccess />} />
+				</Route>
+
+				<Route element={<LayoutStoreWrapper />}>
+					<Route path='/store' element={<Store />} />
+				</Route>
+			</Routes>
 		</AuthProvider>
 	)
 }

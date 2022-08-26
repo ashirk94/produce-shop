@@ -126,6 +126,10 @@ h1 {
     width: 30px;
     height: 20px;
 }
+.success {
+    font-weight: bold;
+    font-size: 40px;
+}
 .cart-quantity {
     color: white;
     width: 1.5rem;
@@ -140,4 +144,8 @@ h1 {
     width: 125px;
     height: 75px;
     object-fit: cover;
+}
+.form-control {
+    max-width: 186px;
+    margin: 0 auto;
 }
