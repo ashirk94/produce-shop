@@ -26,7 +26,7 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            navigate('/')
+            navigate('/store')
         } catch {
             setError('Failed to sign in')
         }
@@ -36,7 +36,7 @@ export default function Login() {
 
   return (
     <div>
-        <Card>
+        <Card className="signup-card" id={theme}>
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Log In</h2>
                 {/* {currentUser && 'Current User: ' + currentUser.email} */}

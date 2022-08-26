@@ -2,13 +2,92 @@
     {
         "id": 1,
         "name": "Apple",
-        "price": 2.00,
+        "price": 0.75,
         "imgUrl": "/images/apple.png"
     },
     {
         "id": 2,
         "name": "Broccoli",
-        "price": 3.00,
+        "price": 3.99,
         "imgUrl": "/images/broccoli.png"
+    },
+    {
+        "id": 3,
+        "name": "Squash",
+        "price": 4.50,
+        "imgUrl": "/images/squash.png"
+    },
+    {
+        "id": 4,
+        "name": "Lettuce",
+        "price": 2.20,
+        "imgUrl": "/images/lettuce.png"
+    },
+    {
+        "id": 5,
+        "name": "Blueberries",
+        "price": 4.80,
+        "imgUrl": "/images/blueberries.png"
+    },
+    {
+        "id": 6,
+        "name": "Potato",
+        "price": 1.50,
+        "imgUrl": "/images/potatoes.png"
+    },
+    {
+        "id": 7,
+        "name": "Tomato",
+        "price": 2.00,
+        "imgUrl": "/images/tomato.png"
+    },
+    {
+        "id": 8,
+        "name": "Cauliflower",
+        "price": 3.60,
+        "imgUrl": "/images/cauliflower.png"
+    },
+    {
+        "id": 9,
+        "name": "Eggplant",
+        "price": 5.20,
+        "imgUrl": "/images/eggplant.png"
+    },
+    {
+        "id": 10,
+        "name": "Bell Pepper",
+        "price": 2.00,
+        "imgUrl": "/images/bellpeppers.png"
+    },
+    {
+        "id": 11,
+        "name": "Bananas",
+        "price": 3.10,
+        "imgUrl": "/images/bananas.png"
+    },
+    {
+        "id": 12,
+        "name": "Onion",
+        "price": 1.40,
+        "imgUrl": "/images/onion.png"
+    },
+    {
+        "id": 13,
+        "name": "Peas",
+        "price": 0.50,
+        "imgUrl": "/images/peas.png"
+    },
+    {
+        "id": 14,
+        "name": "Grapes",
+        "price": 4.10,
+        "imgUrl": "/images/grapes.png"
+    },
+    {
+        "id": 15,
+        "name": "Carrot",
+        "price": 1.30,
+        "imgUrl": "/images/carrot.png"
     }
 ]
+    

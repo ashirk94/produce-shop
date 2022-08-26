@@ -1,10 +1,11 @@
 import { Offcanvas, Stack } from 'react-bootstrap'
 import React, { useContext } from 'react'
-import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import CartItem from './CartItem'
-import { formatCurrency } from '../utilities/formatCurrency'
-import storeItems from '../data/items.json'
-import ThemeContext from '../contexts/ThemeContext'
+import { formatCurrency } from '../../utilities/formatCurrency'
+import storeItems from '../../data/items.json'
+import ThemeContext from '../../contexts/ThemeContext'
+import { Link } from 'react-router-dom'
 
 export default function ShoppingCart({ isOpen }) {
 	const { closeCart, cartItems } = useShoppingCart()
@@ -12,7 +13,7 @@ export default function ShoppingCart({ isOpen }) {
 	return (
 		<Offcanvas show={isOpen} placement='end' onHide={closeCart} id={theme}>
 			<Offcanvas.Header closeButton>
-				<Offcanvas.Title>Cart</Offcanvas.Title>
+				<Offcanvas.Title>Your Items</Offcanvas.Title>
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Stack gap={3}>
@@ -31,13 +32,13 @@ export default function ShoppingCart({ isOpen }) {
 										(i) => i.id === cartItem.id
 									)
 									return (
-										total + item.price ||
-										0 * cartItem.quantity
+										total + item.price * cartItem.quantity || 0
 									)
 								}, 0)
 							)}
 					</div>
 				</Stack>
+                <Link className='btn btn-primary shift-right' onClick={closeCart} to='/checkout'>Checkout</Link>
 			</Offcanvas.Body>
 		</Offcanvas>
 	)

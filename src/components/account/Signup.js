@@ -40,7 +40,7 @@ export default function Signup() {
 
   return (
     <div>
-        <Card>
+        <Card className="signup-card" id={theme}>
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Sign Up</h2>
                 {/* {currentUser && 'Current User: ' + currentUser.email} */}
