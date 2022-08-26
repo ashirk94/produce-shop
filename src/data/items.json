@@ -2,13 +2,43 @@
     {
         "id": 1,
         "name": "Apple",
-        "price": 2.00,
+        "price": 0.75,
         "imgUrl": "/images/apple.png"
     },
     {
         "id": 2,
         "name": "Broccoli",
-        "price": 3.00,
+        "price": 3.99,
         "imgUrl": "/images/broccoli.png"
+    },
+    {
+        "id": 3,
+        "name": "Squash",
+        "price": 4.50,
+        "imgUrl": "/images/squash.png"
+    },
+    {
+        "id": 4,
+        "name": "Lettuce",
+        "price": 2.20,
+        "imgUrl": "/images/lettuce.png"
+    },
+    {
+        "id": 5,
+        "name": "Blueberries",
+        "price": 4.80,
+        "imgUrl": "/images/blueberries.png"
+    },
+    {
+        "id": 6,
+        "name": "Potato",
+        "price": 1.50,
+        "imgUrl": "/images/potatoes.png"
+    },
+    {
+        "id": 7,
+        "name": "Tomato",
+        "price": 2.00,
+        "imgUrl": "/images/tomato.png"
     }
 ]

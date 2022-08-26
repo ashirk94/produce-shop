@@ -149,3 +149,27 @@ h1 {
     max-width: 186px;
     margin: 0 auto;
 }
+.center {
+    margin: 0 auto;
+}
+.shift-right {
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-top: 30px;
+}
+.store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.food-item {
+    min-width: 200px;
+    height: 300px;
+}
+.x-button {
+    padding-bottom: 5px !important;
+    padding-top: -5px !important;
+    padding-right: 7px !important;
+    padding-left: 6px !important;
+}

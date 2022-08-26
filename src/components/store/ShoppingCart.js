@@ -13,7 +13,7 @@ export default function ShoppingCart({ isOpen }) {
 	return (
 		<Offcanvas show={isOpen} placement='end' onHide={closeCart} id={theme}>
 			<Offcanvas.Header closeButton>
-				<Offcanvas.Title>Cart</Offcanvas.Title>
+				<Offcanvas.Title>Your Items</Offcanvas.Title>
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Stack gap={3}>
@@ -38,7 +38,7 @@ export default function ShoppingCart({ isOpen }) {
 							)}
 					</div>
 				</Stack>
-                <Link className='btn btn-primary' to='/checkout'>Checkout</Link>
+                <Link className='btn btn-primary shift-right' to='/checkout'>Checkout</Link>
 			</Offcanvas.Body>
 		</Offcanvas>
 	)

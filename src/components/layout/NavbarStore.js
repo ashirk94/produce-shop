@@ -28,6 +28,8 @@ export default function NavbarStore() {
 				</Nav.Link>}
                 {!currentUser && <Nav.Link to={'/login'} as={NavLink}>Login
 				</Nav.Link>}
+                {!currentUser && <Nav.Link to={'/signup'} as={NavLink}>Sign Up
+				</Nav.Link>}
 			</Nav>
 			{cartQuantity > 0 && (
 				<Button onClick={openCart}>

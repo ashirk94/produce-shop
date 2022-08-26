@@ -24,6 +24,8 @@ export default function Navbar() {
 				</Nav.Link>}
                 {!currentUser && <Nav.Link to={'/login'} as={NavLink}>Login
 				</Nav.Link>}
+                {!currentUser && <Nav.Link to={'/signup'} as={NavLink}>Sign Up
+				</Nav.Link>}
 			</Nav>
 		</BootNav>
 	)

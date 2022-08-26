@@ -1,5 +1,4 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
 import storeItems from '../../data/items.json'
 import StoreItem from './StoreItem'
 
@@ -8,13 +7,11 @@ export default function Store() {
     <>
         <div>
         <h1>Store</h1>
-        <Row>
+        <div className='store'>
             {storeItems.map(item => (
-                <Col key={item.id}>
-                    <StoreItem {...item}/>
-                    </Col>
+                    <StoreItem key={item.id} {...item}/>
             ))}        
-        </Row>
+        </div>
         </div>
     </>
   )

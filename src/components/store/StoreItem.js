@@ -10,7 +10,7 @@ export default function StoreItem(props) {
 	const quantity = getItemQuantity(props.id)
 
 	return (
-		<Card className='h-100'>
+		<Card className='food-item'>
 			<Card.Img
 				variant='top'
 				src={props.imgUrl}

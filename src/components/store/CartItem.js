@@ -23,6 +23,7 @@ export default function CartItem(props) {
 			</div>
 			<div> {formatCurrency(item.price * props.quantity)}</div>
 			<Button
+            className='x-button'
 				variant='outline-danger'
 				size='sm'
 				onClick={() => removeFromCart(item.id)}>

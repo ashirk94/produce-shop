@@ -35,12 +35,13 @@ function App() {
 						path='/forgot-password'
 						element={<ForgotPassword />}
 					/>
-					<Route path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
+					
 					<Route path='/success' element={<PaymentSuccess />} />
 				</Route>
 
 				<Route element={<LayoutStoreWrapper />}>
+                <Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
 					<Route path='/store' element={<Store />} />
 				</Route>
 			</Routes>
