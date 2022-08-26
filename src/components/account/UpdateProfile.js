@@ -50,10 +50,9 @@ export default function UpdateProfile() {
 
   return (
     <div>
-        <Card>
+        <Card id={theme} className="signup-card">
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Update Profile</h2>
-                {/* {currentUser && 'Current User: ' + currentUser.email} */}
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id="email">
@@ -62,11 +61,12 @@ export default function UpdateProfile() {
                     </Form.Group>
                     <Form.Group id="password">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} placeholder="If blank, password will remain the same"/>
+                        <Form.Control type="password" ref={passwordRef} />
                     </Form.Group>
                     <Form.Group id="password-confirm">
                         <Form.Label>Password Confirmation</Form.Label>
-                        <Form.Control type="password" ref={passwordConfirmRef} placeholder="If blank, password will remain the same"/>
+                        <Form.Control type="password" ref={passwordConfirmRef} />
+                        <label className="text-muted mt-2">Leave password fields blank to keep your old password.</label>
                     </Form.Group>
                     <Button disabled={loading} className="w-100 mt-2" type="submit">Update</Button>
                 </Form>

@@ -10,16 +10,15 @@ import UpdateProfile from './account/UpdateProfile'
 import Home from './pages/Home'
 import Store from './store/Store'
 import About from './pages/About'
-import LayoutWrapper from './layout/LayoutWrapper'
-import LayoutStoreWrapper from './layout/LayoutStoreWrapper'
+import Layout from './layout/Layout'
 import Checkout from './store/Checkout'
 import PaymentSuccess from './store/PaymentSuccess'
 
 function App() {
 	return (
 		<AuthProvider>
-			<Routes>
-				<Route element={<LayoutWrapper />}>
+			<Layout>
+				<Routes>
 					<Route element={<PrivateRoute />}>
 						<Route
 							path='/update-profile'
@@ -35,16 +34,14 @@ function App() {
 						path='/forgot-password'
 						element={<ForgotPassword />}
 					/>
-					
-					<Route path='/success' element={<PaymentSuccess />} />
-				</Route>
 
-				<Route element={<LayoutStoreWrapper />}>
-                <Route path='/' element={<Home />} />
+					<Route path='/success' element={<PaymentSuccess />} />
+
+					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/store' element={<Store />} />
-				</Route>
-			</Routes>
+				</Routes>
+			</Layout>
 		</AuthProvider>
 	)
 }

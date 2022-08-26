@@ -10,7 +10,7 @@ export default function StoreItem(props) {
 	const quantity = getItemQuantity(props.id)
 
 	return (
-		<Card className='food-item'>
+		<Card className='food-item mt-3' id={theme}>
 			<Card.Img
 				variant='top'
 				src={props.imgUrl}
@@ -31,7 +31,7 @@ export default function StoreItem(props) {
 					) : (
 						<div className='d-flex align-items-center flex-column btn-gap'>
 							<div className='d-flex align-items-center justify-content-center btn-gap'>
-                                <Button size='sm' onClick={() => decreaseCartQuantity(props.id)}>-</Button>
+                                <Button className='minus' size='sm' onClick={() => decreaseCartQuantity(props.id)}>-</Button>
                                 <span className='fs-3'>{quantity}</span>
                                 in Cart
                                 <Button size='sm' onClick={() => increaseCartQuantity(props.id)}>+</Button>

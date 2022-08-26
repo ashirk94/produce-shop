@@ -24,7 +24,7 @@ export default function Dashboard() {
     }
   return (
     <div>
-        <Card>
+        <Card id={theme} className="signup-card">
             <Card.Body id={theme} className="signup-card">
             <h2 className="text-center mb-4">Account Info</h2>
             {error && <Alert variant="danger">{error}</Alert>}

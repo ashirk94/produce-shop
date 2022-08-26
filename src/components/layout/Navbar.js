@@ -1,12 +1,19 @@
 import React, { useContext } from 'react'
-import { Nav, Navbar as BootNav } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Nav, Button, Navbar as BootNav } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink, useLocation } from 'react-router-dom'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import ThemeContext from '../../contexts/ThemeContext'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import { useAuth } from '../../contexts/AuthContext'
 
-export default function Navbar() {
+export default function NavbarStore() {
 	const { theme } = useContext(ThemeContext)
+	const { openCart, cartQuantity } = useShoppingCart()
     const { currentUser } = useAuth()
+    const location = useLocation()
+    const cart = (cartQuantity > 0) && ((location.pathname === '/store') || (location.pathname === '/') || (location.pathname === '/about'))
+
 	return (
 		<BootNav className='shadow-sm mb-3' id={theme}>
 			<Nav className='me-auto'>
@@ -27,6 +34,14 @@ export default function Navbar() {
                 {!currentUser && <Nav.Link to={'/signup'} as={NavLink}>Sign Up
 				</Nav.Link>}
 			</Nav>
+			{cart && (
+				<Button onClick={openCart}>
+					<FontAwesomeIcon icon={faCartShopping} />
+					<div className='rounded-circle bg-danger d-flex justify-content-center alight-items-center cart-quantity'>
+						{cartQuantity}
+					</div>
+				</Button>
+			)}
 		</BootNav>
 	)
 }

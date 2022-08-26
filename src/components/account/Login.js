@@ -36,7 +36,7 @@ export default function Login() {
 
   return (
     <div>
-        <Card>
+        <Card className="signup-card" id={theme}>
             <Card.Body id={theme} className="signup-card">
                 <h2 className="text-center mb-4">Log In</h2>
                 {/* {currentUser && 'Current User: ' + currentUser.email} */}

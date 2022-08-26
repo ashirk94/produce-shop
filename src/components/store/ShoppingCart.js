@@ -38,7 +38,7 @@ export default function ShoppingCart({ isOpen }) {
 							)}
 					</div>
 				</Stack>
-                <Link className='btn btn-primary shift-right' to='/checkout'>Checkout</Link>
+                <Link className='btn btn-primary shift-right' onClick={closeCart} to='/checkout'>Checkout</Link>
 			</Offcanvas.Body>
 		</Offcanvas>
 	)

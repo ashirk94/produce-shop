@@ -1,13 +1,15 @@
 import { Stack, Form, Button } from 'react-bootstrap'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import CartItem from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
 import storeItems from '../../data/items.json'
 import { useNavigate } from 'react-router-dom'
+import ThemeContext from '../../contexts/ThemeContext'
 
 export default function Checkout() {
 	const { cartItems, removeAllFromCart } = useShoppingCart()
+    const { theme } = useContext(ThemeContext)
 
 	const navigate = useNavigate()
 
@@ -53,6 +55,7 @@ export default function Checkout() {
 		}
 
 		if (validated) {
+            event.preventDefault()
             removeAllFromCart()
 			navigate('/success')
 		}
@@ -60,6 +63,34 @@ export default function Checkout() {
 
 	return (
 		<>
+        <div className='container text-center mt-5'>
+				<h2>Payment Method</h2>
+				<p>
+					This is an example payment, use the fake card number below.
+					<br />
+				</p>
+				<h3 className='mb-5'>3388</h3>
+				<Form>
+					<Form.Group className='mb-3' controlId='formBasicEmail'>
+						<Form.Label>Card Number</Form.Label>
+						<input
+							type='text'
+							onChange={(e) => validateCreditCard(e.target.value)}
+							placeholder='0000-0000-0000-0000'
+                            className='form-control card-input'
+                            id={theme}
+						/>
+						{<span style={color}>{errorMessage}</span>}
+					</Form.Group>
+					<Button
+						variant='primary'
+						type='submit'
+						onClick={handleSubmit}>
+						Submit
+					</Button>
+				</Form>
+
+        <div className='checkout'>
 			<Stack gap={3} className='mt-3'>
 				{cartItems != null &&
 					cartItems.length > 0 &&
@@ -82,31 +113,8 @@ export default function Checkout() {
 						)}
 				</div>
 			</Stack>
-			<div className='container text-center mt-5'>
-				<h2>Payment Method</h2>
-				<p>
-					This is an example payment, use the fake card number below.
-					<br />
-				</p>
-				<h3 className='mb-5'>3388</h3>
-				<Form>
-					<Form.Group className='mb-3' controlId='formBasicEmail'>
-						<Form.Label>Card Number</Form.Label>
-						<Form.Control
-							type='text'
-							onChange={(e) => validateCreditCard(e.target.value)}
-							placeholder='0000-0000-0000-0000'
-						/>
-						{<span style={color}>{errorMessage}</span>}
-					</Form.Group>
-					<Button
-						variant='primary'
-						type='submit'
-						onClick={handleSubmit}>
-						Submit
-					</Button>
-				</Form>
-			</div>
+            </div>
+            </div>
 		</>
 	)
 }
