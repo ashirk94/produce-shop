@@ -6,7 +6,7 @@ export default function Home() {
 
 	return (
 		<div className='homepage d-flex justify-content-center align-items-center mt-3' id={theme}>
-            <h1>Welcome to the Produce Shop!</h1>			
+            <h1>Welcome to Alan's Produce Shop!</h1>			
 		</div>
 	)
 }
