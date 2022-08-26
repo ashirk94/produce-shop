@@ -206,3 +206,10 @@ h1 {
 .btn-primary {
     background-color: hsl(225, 100%, 35%) !important;
 }
+.no-padding {
+    padding: 0 !important;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

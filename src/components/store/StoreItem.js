@@ -25,8 +25,9 @@ export default function StoreItem(props) {
 						{formatCurrency(props.price)}
 					</span>
 				</Card.Title>
+                <div className='no-padding'>
 					{quantity === 0 ? (
-						<Button className='w-100' onClick={() => increaseCartQuantity(props.id)}>+ Add To Cart</Button>
+						<Button variant='primary' onClick={() => increaseCartQuantity(props.id)}>+ Add To Cart</Button>
 					) : (
 						<div className='d-flex align-items-center flex-column btn-gap'>
 							<div className='d-flex align-items-center justify-content-center btn-gap'>
@@ -38,7 +39,9 @@ export default function StoreItem(props) {
                             <Button variant='danger' size='sm' onClick={() => removeFromCart(props.id)}>Remove</Button>
 						</div>                      
 					)}
+                    </div>
 			</Card.Body>
+
 		</Card>
 	)
 }
