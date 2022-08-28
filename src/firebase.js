@@ -13,5 +13,5 @@ const config = {
 const app = initializeApp(config)
 
 export const auth = getAuth(app)
-//console.log(config)
+
 export default app

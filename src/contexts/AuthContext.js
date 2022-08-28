@@ -30,45 +30,28 @@ function changePassword(password) {
 }
 
 async function signup(email, password) {
-	let errorMsg = 'Error'
 	try {
 		await createUserWithEmailAndPassword(auth, email, password)
 	} catch (error) {
-		const errorCode = error.code
-		const errorMessage = error.message
-		console.error(errorMessage, errorCode)
-		errorMsg = errorMessage
-	}
-	if (errorMsg !== 'success') {
-		throw errorMsg
+		throw error.message
 	}
 }
 
 async function login(email, password) {
-	let errorMsg = 'Error'
 	try {
 		await signInWithEmailAndPassword(auth, email, password)
-		return true
 	} catch (error) {
-		const errorCode = error.code
-		const errorMessage = error.message
-		console.error(errorMessage, errorCode)
-		errorMsg = errorMessage
-	}
-	if (errorMsg !== 'success') {
-		throw errorMsg
+		throw error.message
 	}
 }
 
 function logout() {
-	signOut(auth)
-		.then(() => {
-			return true
-		})
-		.catch((error) => {
-			console.error(error)
-			return false
-		})
+    try {
+        signOut(auth)
+    }
+    catch (error) {
+		console.error(error)
+	}
 }
 
 function resetPassword(email) {
