@@ -1,0 +1,8 @@
+{
+    "name": "Alan's Produce Shop",
+    "short_name": "Produce Shop",
+    "description": "E-Commerce React Site.",
+    "start_url": "/?homescreen=1",
+    "background_color": "#000000",
+    "theme_color": "#0f4a73"
+  }
