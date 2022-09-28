@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "5f682a16da4cc40004a3",
+    "revision": "68a28a8d17f99040117c",
     "url": "/produce-shop/static/css/main.128b14fb.chunk.css"
   },
   {
-    "revision": "5f682a16da4cc40004a3",
-    "url": "/produce-shop/static/js/main.5f682a16.chunk.js"
+    "revision": "68a28a8d17f99040117c",
+    "url": "/produce-shop/static/js/main.68a28a8d.chunk.js"
   },
   {
     "revision": "bbbda9192521f03c2445",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/produce-shop/static/media/produce1.75bb9cea.png"
   },
   {
-    "revision": "12e3a322f1566cef7940f6784cc1417d",
+    "revision": "d4d97bc9ee30a627414f9b9c7156ccbb",
     "url": "/produce-shop/index.html"
   }
 ];
