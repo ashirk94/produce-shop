@@ -1,0 +1,27 @@
+Step#1 : data.js
+in data.js import all your local image asset files that you need. ex.
+
+import ProfilePicN from "./ProfilePicN.jpg";
+
+export default [
+  {
+    "name": "PersonN",
+    "image": ProfilePicN 
+  }
+]
+
+*important: no quotes around the import, quotes on everything else as they are all literals
+
+Step#2:
+
+      import data from "./data.
+    
+      .
+      .
+      .
+    /*inside the react component*/
+     {
+       data.map((dataItem,key)=> {
+          <img src={dataItem.image}>
+       })
+     }

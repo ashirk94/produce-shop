@@ -1,5 +1,5 @@
 import React from 'react'
-import storeItems from '../../data/items.json'
+import storeItems from '../../data/items.js'
 import StoreItem from './StoreItem'
 
 export default function Store() {

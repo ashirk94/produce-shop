@@ -12,26 +12,26 @@ export default function NavbarStore() {
 	const { openCart, cartQuantity } = useShoppingCart()
     const { currentUser } = useAuth()
     const location = useLocation()
-    const cart = (cartQuantity > 0) && ((location.pathname === '/store') || (location.pathname === '/') || (location.pathname === '/about'))
+    const cart = (cartQuantity > 0) && ((location.pathname === '/produce-shop/store') || (location.pathname === '/produce-shop') || (location.pathname === '/produce-shop/about'))
 
 	return (
 		<BootNav className='shadow-sm mb-3' id={theme}>
 			<Nav className='me-auto'>
-				<Nav.Link to={'/'} as={NavLink}>
+				<Nav.Link to={'/produce-shop'} as={NavLink}>
 					Home
 				</Nav.Link>
-				<Nav.Link to={'/store'} as={NavLink}>
+				<Nav.Link to={'/produce-shop/store'} as={NavLink}>
 					Store
 				</Nav.Link>
-				<Nav.Link to={'/about'} as={NavLink}>
+				<Nav.Link to={'/produce-shop/about'} as={NavLink}>
 					About
 				</Nav.Link>
-                {currentUser && <Nav.Link to={'/dashboard'} as={NavLink}>
+                {currentUser && <Nav.Link to={'/produce-shop/dashboard'} as={NavLink}>
 					MyAccount
 				</Nav.Link>}
-                {!currentUser && <Nav.Link to={'/login'} as={NavLink}>Login
+                {!currentUser && <Nav.Link to={'/produce-shop/login'} as={NavLink}>Login
 				</Nav.Link>}
-                {!currentUser && <Nav.Link to={'/signup'} as={NavLink}>Sign Up
+                {!currentUser && <Nav.Link to={'/produce-shop/signup'} as={NavLink}>Sign Up
 				</Nav.Link>}
 			</Nav>
 			{cart && (

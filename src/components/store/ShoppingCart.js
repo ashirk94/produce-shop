@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import CartItem from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
-import storeItems from '../../data/items.json'
+import storeItems from '../../data/items.js'
 import ThemeContext from '../../contexts/ThemeContext'
 import { Link } from 'react-router-dom'
 

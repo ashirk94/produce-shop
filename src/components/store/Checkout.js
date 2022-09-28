@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import CartItem from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
-import storeItems from '../../data/items.json'
+import storeItems from '../../data/items.js'
 import { useNavigate } from 'react-router-dom'
 import ThemeContext from '../../contexts/ThemeContext'
 

@@ -21,25 +21,25 @@ function App() {
 				<Routes>
 					<Route element={<PrivateRoute />}>
 						<Route
-							path='/update-profile'
+							path='/produce-shop/update-profile'
 							element={<UpdateProfile />}
 						/>
-						<Route path='/dashboard' element={<Dashboard />} />
-						<Route path='/checkout' element={<Checkout />} />
+						<Route path='/produce-shop/dashboard' element={<Dashboard />} />
+						<Route path='/produce-shop/checkout' element={<Checkout />} />
 					</Route>
 
-					<Route path='/signup' element={<Signup />} />
-					<Route path='/login' element={<Login />} />
+					<Route path='/produce-shop/signup' element={<Signup />} />
+					<Route path='/produce-shop/login' element={<Login />} />
 					<Route
-						path='/forgot-password'
+						path='/produce-shop/forgot-password'
 						element={<ForgotPassword />}
 					/>
 
-					<Route path='/success' element={<PaymentSuccess />} />
+					<Route path='/produce-shop/success' element={<PaymentSuccess />} />
 
-					<Route path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/store' element={<Store />} />
+					<Route path='/produce-shop' element={<Home />} />
+					<Route path='/produce-shop/about' element={<About />} />
+					<Route path='/produce-shop/store' element={<Store />} />
 				</Routes>
 			</Layout>
 		</AuthProvider>
