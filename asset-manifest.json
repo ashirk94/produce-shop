@@ -1,7 +1,7 @@
 {
   "main.css": "/produce-shop/static/css/main.128b14fb.chunk.css",
-  "main.js": "/produce-shop/static/js/main.4631566c.chunk.js",
-  "main.js.map": "/produce-shop/static/js/main.4631566c.chunk.js.map",
+  "main.js": "/produce-shop/static/js/main.7696941b.chunk.js",
+  "main.js.map": "/produce-shop/static/js/main.7696941b.chunk.js.map",
   "static/css/1.33e5fbf8.chunk.css": "/produce-shop/static/css/1.33e5fbf8.chunk.css",
   "static/js/1.bbbda919.chunk.js": "/produce-shop/static/js/1.bbbda919.chunk.js",
   "static/js/1.bbbda919.chunk.js.map": "/produce-shop/static/js/1.bbbda919.chunk.js.map",
@@ -16,9 +16,9 @@
   "static/media/tomato.png": "/produce-shop/static/media/tomato.4c6beb76.png",
   "static/media/cauliflower.png": "/produce-shop/static/media/cauliflower.c7334cf3.png",
   "static/media/index.css": "/produce-shop/static/media/produce1.75bb9cea.png",
-  "static/css/1.33e5fbf8.chunk.css.map": "/produce-shop/static/css/1.33e5fbf8.chunk.css.map",
   "static/css/main.128b14fb.chunk.css.map": "/produce-shop/static/css/main.128b14fb.chunk.css.map",
+  "static/css/1.33e5fbf8.chunk.css.map": "/produce-shop/static/css/1.33e5fbf8.chunk.css.map",
   "index.html": "/produce-shop/index.html",
-  "precache-manifest.9871dbcbda7b170b4d2e324e3c095bf7.js": "/produce-shop/precache-manifest.9871dbcbda7b170b4d2e324e3c095bf7.js",
+  "precache-manifest.5cd0e64daa6901f266468f81e583b33c.js": "/produce-shop/precache-manifest.5cd0e64daa6901f266468f81e583b33c.js",
   "service-worker.js": "/produce-shop/service-worker.js"
 }
