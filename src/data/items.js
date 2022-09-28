@@ -55,6 +55,48 @@ export default [
         "name": "Cauliflower",
         "price": 3.60,
         "imgUrl": cauliflower
+    },
+    {
+        "id": 9,
+        "name": "Eggplant",
+        "price": 5.20,
+        "imgUrl": "/images/eggplant.png"
+    },
+    {
+        "id": 10,
+        "name": "Bell Pepper",
+        "price": 2.00,
+        "imgUrl": "/images/bellpeppers.png"
+    },
+    {
+        "id": 11,
+        "name": "Bananas",
+        "price": 3.10,
+        "imgUrl": "/images/bananas.png"
+    },
+    {
+        "id": 12,
+        "name": "Onion",
+        "price": 1.40,
+        "imgUrl": "/images/onion.png"
+    },
+    {
+        "id": 13,
+        "name": "Peas",
+        "price": 0.50,
+        "imgUrl": "/images/peas.png"
+    },
+    {
+        "id": 14,
+        "name": "Grapes",
+        "price": 4.10,
+        "imgUrl": "/images/grapes.png"
+    },
+    {
+        "id": 15,
+        "name": "Carrot",
+        "price": 1.30,
+        "imgUrl": "/images/carrot.png"
     }
 ]
     

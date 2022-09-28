@@ -17,7 +17,7 @@ export default function Signup() {
 
 	useEffect(() => {
 		if (currentUser) {
-			navigate('/')
+			navigate('/produce-shop/')
 		}
 	}, [currentUser, navigate])
 
@@ -36,7 +36,7 @@ export default function Signup() {
 				passwordRef.current.value
 			)
 			if (signupStatus) {
-				navigate('/login')
+				navigate('/produce-shop/login')
 			} else {
                 setError(signupStatus)
             }
@@ -85,7 +85,7 @@ export default function Signup() {
 				</Card.Body>
 			</Card>
 			<div className='w-100 text-center mt-2'>
-				Already have an account? <Link to='/login'>Log In</Link>
+				Already have an account? <Link to='/produce-shop/login'>Log In</Link>
 			</div>
 		</div>
 	)

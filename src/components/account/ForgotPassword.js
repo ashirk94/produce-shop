@@ -16,7 +16,7 @@ export default function ForgotPassword() {
 
     useEffect(() => {
         if(currentUser) {
-            navigate('/')
+            navigate('/produce-shop')
         }
     }, [currentUser, navigate])
 
@@ -53,7 +53,7 @@ export default function ForgotPassword() {
             </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">
-            <Link to='/signup'>Log In</Link>
+            <Link to='/produce-shop/signup'>Log In</Link>
         </div>
     </div>
   )

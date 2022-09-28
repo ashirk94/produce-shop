@@ -19,7 +19,7 @@ export default function Dashboard() {
             await logout()
             removeAllFromCart()
             window.localStorage.clear()
-            navigate('/')
+            navigate('/produce-shop')
         } 
         catch (e) {
             console.error(e)

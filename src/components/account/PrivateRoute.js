@@ -8,7 +8,7 @@ export default function PrivateRoute({ component: Component, ...rest }) {
 
 	useEffect(() => {
 		if (!currentUser) {
-			navigate('/login', { replace: true })
+			navigate('/produce-shop/login', { replace: true })
 		}
 	}, [navigate, currentUser])
 
