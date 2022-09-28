@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "96538fc79bc8efce7f09",
-    "url": "/produce-shop/static/css/main.128b14fb.chunk.css"
+    "revision": "d5fb6b19a05bc6d34d4c",
+    "url": "/produce-shop/static/css/main.b7030ec0.chunk.css"
   },
   {
-    "revision": "96538fc79bc8efce7f09",
-    "url": "/produce-shop/static/js/main.96538fc7.chunk.js"
+    "revision": "d5fb6b19a05bc6d34d4c",
+    "url": "/produce-shop/static/js/main.d5fb6b19.chunk.js"
   },
   {
-    "revision": "bbbda9192521f03c2445",
-    "url": "/produce-shop/static/css/1.33e5fbf8.chunk.css"
+    "revision": "98960b3340ab4b53529c",
+    "url": "/produce-shop/static/css/1.e0a7f1e4.chunk.css"
   },
   {
-    "revision": "bbbda9192521f03c2445",
-    "url": "/produce-shop/static/js/1.bbbda919.chunk.js"
+    "revision": "98960b3340ab4b53529c",
+    "url": "/produce-shop/static/js/1.98960b33.chunk.js"
   },
   {
     "revision": "34ce230d3c3beaf592e9",
@@ -52,11 +52,39 @@ self.__precacheManifest = [
     "url": "/produce-shop/static/media/cauliflower.c7334cf3.png"
   },
   {
+    "revision": "fb942fdd13694be7d9ae1df0bf3f8f3e",
+    "url": "/produce-shop/static/media/eggplant.fb942fdd.png"
+  },
+  {
+    "revision": "1f86b99a89571307a6ea1873a3af0c5c",
+    "url": "/produce-shop/static/media/bellpeppers.1f86b99a.png"
+  },
+  {
+    "revision": "4bb1c501decea8638766bcf2ec248709",
+    "url": "/produce-shop/static/media/bananas.4bb1c501.png"
+  },
+  {
+    "revision": "95d38c868c4be424cb817903a2bab61e",
+    "url": "/produce-shop/static/media/onion.95d38c86.png"
+  },
+  {
+    "revision": "ee48de3f5170f095cc1282e802d6163b",
+    "url": "/produce-shop/static/media/peas.ee48de3f.png"
+  },
+  {
+    "revision": "17eec46c747691e34f97ffe687026e73",
+    "url": "/produce-shop/static/media/grapes.17eec46c.png"
+  },
+  {
+    "revision": "debe59be9b66de19ace0a4a3869a50b0",
+    "url": "/produce-shop/static/media/carrot.debe59be.png"
+  },
+  {
     "revision": "75bb9cea90fa16260f2671495edf98b9",
     "url": "/produce-shop/static/media/produce1.75bb9cea.png"
   },
   {
-    "revision": "350ee8f753c077ab5f0ec8d6cfc35fb5",
+    "revision": "2bfcbc32de237510e799f7a8234deb1a",
     "url": "/produce-shop/index.html"
   }
 ];
