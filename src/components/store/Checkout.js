@@ -57,7 +57,7 @@ export default function Checkout() {
 		if (validated) {
             event.preventDefault()
             removeAllFromCart()
-			navigate('/success')
+			navigate('/produce-shop/success')
 		}
 	}
 

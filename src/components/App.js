@@ -23,23 +23,24 @@ function App() {
 						<Route
 							path='/produce-shop/update-profile'
 							element={<UpdateProfile />}
+                            exact
 						/>
-						<Route path='/produce-shop/dashboard' element={<Dashboard />} />
-						<Route path='/produce-shop/checkout' element={<Checkout />} />
+						<Route path='/produce-shop/dashboard' exact element={<Dashboard />} />
+						<Route path='/produce-shop/checkout' exact element={<Checkout />} />
 					</Route>
 
-					<Route path='/produce-shop/signup' element={<Signup />} />
-					<Route path='/produce-shop/login' element={<Login />} />
+					<Route path='/produce-shop/signup' exact element={<Signup />} />
+					<Route path='/produce-shop/login' exact element={<Login />} />
 					<Route
 						path='/produce-shop/forgot-password'
 						element={<ForgotPassword />}
 					/>
 
-					<Route path='/produce-shop/success' element={<PaymentSuccess />} />
+					<Route path='/produce-shop/success' exact element={<PaymentSuccess />} />
 
-					<Route path='/produce-shop' element={<Home />} />
-					<Route path='/produce-shop/about' element={<About />} />
-					<Route path='/produce-shop/store' element={<Store />} />
+					<Route path='/produce-shop' exact element={<Home />} />
+					<Route path='/produce-shop/about' exact element={<About />} />
+					<Route path='/produce-shop/store' exact element={<Store />} />
 				</Routes>
 			</Layout>
 		</AuthProvider>
